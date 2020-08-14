@@ -4,7 +4,7 @@
 you can re run setup.py 
 if you have added some wrong value
 """
-from PIL import Image  # Image Show 
+import Image  # Image Show 
 import os, sys
 import configparser
 re="\033[1;31m"
