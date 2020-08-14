@@ -26,7 +26,7 @@ def banner():
 	{re}╚═╝{cy}└─┘ ┴ └─┘┴
 	""")
 banner()
-img = Image.open('iitdeveloper.jpg')    
+img = Image.open('TelegramBanner.jpg')    
 img.show() 
 print(gr+"[+] Installing requierments ...")
 os.system('python3 -m pip install telethon')
