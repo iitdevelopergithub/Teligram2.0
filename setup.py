@@ -1,7 +1,4 @@
-img.show() 
-#!/bin/env python3
-# code by :IIT DEVELOPER
-
+# code by :IIT DEVELOPER (RAVIKANT YADAV)
 """
 you can re run setup.py 
 if you have added some wrong value
