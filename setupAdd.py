@@ -1,5 +1,3 @@
-img.show() 
-#!/bin/env python3
 # code by :IIT DEVELOPER
 
 """
