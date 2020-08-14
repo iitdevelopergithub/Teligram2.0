@@ -10,7 +10,7 @@ import time
 import random
 import os, sys
 import configparser
-from PIL import Image  # Image Show 
+#from PIL import Image  # Image Show 
 import msvcrt #Here the key used to exit the loop was <ESC>, chr(27).
 re="\033[1;31m"
 gr="\033[1;32m"
@@ -26,8 +26,8 @@ def banner():
 	""")
 banner()
 print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")   
-img = Image.open('TelegramBanner.jpg')    
-img.show() 
+#img = Image.open('TelegramBanner.jpg')    
+#img.show() 
 
 cpass = configparser.RawConfigParser()
 cpass.read('configAdd.data')
