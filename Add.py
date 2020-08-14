@@ -10,6 +10,7 @@ import time
 import random
 import os, sys
 import configparser
+from PIL import Image  # Image Show 
 import msvcrt #Here the key used to exit the loop was <ESC>, chr(27).
 re="\033[1;31m"
 gr="\033[1;32m"
@@ -24,9 +25,9 @@ def banner():
      {re} welcome to  IIT {cy} DEVELOPER 
 	""")
 banner()
-print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")
-
-
+print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")   
+img = Image.open('iitdeveloper.jpg')    
+img.show() 
 api_id = input(gr+"[+] Enter Your Id:"+re)#1599918  #Enter Your 7 Digit Telegram API ID.
 api_hash = input(gr+"[+] Enter Your Hash Key: "+re)#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
 phone = input(gr+"[+] Enter Your Number: "+re)#'+919005552324'   #Enter Your Mobilr Number With Country Code.
