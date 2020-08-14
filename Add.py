@@ -28,13 +28,23 @@ banner()
 print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")   
 img = Image.open('iitdeveloper.jpg')    
 img.show() 
-api_id = input(gr+"[+] Enter Your Id:"+re)#1599918  #Enter Your 7 Digit Telegram API ID.
-api_hash = input(gr+"[+] Enter Your Hash Key: "+re)#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
-phone = input(gr+"[+] Enter Your Number: "+re)#'+919005552324'   #Enter Your Mobilr Number With Country Code.
-client = TelegramClient(phone, api_id, api_hash)
-async def main():
+
+cpass = configparser.RawConfigParser()
+cpass.read('configAdd.data')
+
+try:
+    api_id = cpass['cred']['id']
+    api_hash = cpass['cred']['hash']
+    phone = cpass['cred']['phone']
+    client = TelegramClient(phone, api_id, api_hash)
+    async def main():
     # Now you can use all client methods listed below, like for example...
-    await client.send_message('me', 'WELCOME TO IIT DEVELOPER TELEGRAM SOFTWARE ANY QUEARY CALL US 9005552324 ')
+    await client.send_message('me', 'WELCOME TO IIT DEVELOPER TELEGRAM SOFTWARE ANY QUEARY CALL US 9005552324 ')	
+except KeyError:
+    os.system('clear')
+    banner()
+    print(re+"[!] run python3 Scraper.py first !!\n")
+    sys.exit(1)
 
 
 SLEEP_TIME_1 = 100
@@ -44,7 +54,7 @@ with client:
 client.connect()
 if not client.is_user_authorized():
     client.send_code_request(phone)
-    client.sign_in(phone, input('40779'))
+    client.sign_in(phone, input('Enter Code'))
 
 users = []
 with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name 
