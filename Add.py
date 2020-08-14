@@ -39,7 +39,7 @@ try:
     client = TelegramClient(phone, api_id, api_hash)
     async def main():
     # Now you can use all client methods listed below, like for example...
-    await client.send_message('me', 'WELCOME TO IIT DEVELOPER TELEGRAM SOFTWARE ANY QUEARY CALL US 9005552324 ')	
+    await client.send_message('me', 'WELCOME TO IIT DEVELOPER TELEGRAM SOFTWARE ANY QUEARY CALL US Hello !!!!!')
 except KeyError:
     os.system('clear')
     banner()
