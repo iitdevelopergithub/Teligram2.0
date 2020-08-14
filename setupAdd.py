@@ -1,10 +1,3 @@
-# code by :IIT DEVELOPER
-
-"""
-you can re run setup.py 
-if you have added some wrong value
-"""
-#from PIL import Image  # Image Show 
 import os, sys
 import configparser
 re="\033[1;31m"
@@ -27,8 +20,6 @@ banner()
 #img = Image.open('TelegramBanner.jpg')    
 #img.show() 
 print(gr+"[+] Installing requierments ...")
-os.system('python3 -m pip install telethon')
-os.system('pip3 install telethon')
 banner()
 os.system("touch configAdd.data")
 cpass = configparser.RawConfigParser()
@@ -42,7 +33,7 @@ cpass.set('cred', 'phone', xphone)
 setup = open('configAdd.data', 'w')
 cpass.write(setup)
 setup.close()
-print(gr+"[+] setup complete !")
+print(gr+"[+] setup for Add Member  complete !")
 print(gr+"[+] now you can run any tool !")
 print(gr+"[+] make sure to read docs 4 installation & api setup")
 print(gr+"[+] https://github.com/iitdevelopergithub/Telegram-hack/edit/master/README.md")
