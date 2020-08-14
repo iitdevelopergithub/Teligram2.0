@@ -4,7 +4,7 @@
 you can re run setup.py 
 if you have added some wrong value
 """
-from PIL import Image  # Image Show 
+#from PIL import Image  # Image Show 
 import os, sys
 import configparser
 re="\033[1;31m"
@@ -24,8 +24,8 @@ def banner():
 	{re}╚═╝{cy}└─┘ ┴ └─┘┴
 	""")
 banner()
-img = Image.open('TelegramBanner.jpg')    
-img.show() 
+#img = Image.open('TelegramBanner.jpg')    
+#img.show() 
 print(gr+"[+] Installing requierments ...")
 os.system('python3 -m pip install telethon')
 os.system('pip3 install telethon')
