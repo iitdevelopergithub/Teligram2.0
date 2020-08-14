@@ -26,13 +26,14 @@ def banner():
 banner()
 print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")
 
-api_id = input("Enter Your Id: ")#1599918  #Enter Your 7 Digit Telegram API ID.
-api_hash = input("Enter Your Hash Key: ")#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
-phone = input("Enter Your Number: ")#'+919005552324'   #Enter Your Mobilr Number With Country Code.
+
+api_id = input(gr+"[+] Enter Your Id:"+re)#1599918  #Enter Your 7 Digit Telegram API ID.
+api_hash = input(gr+"[+] Enter Your Hash Key: "+re)#'741c483b128c763e5e26a54579329ebb'   #Enter Yor 32 Character API Hash
+phone = input(gr+"[+] Enter Your Number: "+re)#'+919005552324'   #Enter Your Mobilr Number With Country Code.
 client = TelegramClient(phone, api_id, api_hash)
 async def main():
     # Now you can use all client methods listed below, like for example...
-    await client.send_message('me', 'Hello !!!!!')
+    await client.send_message('me', 'WELCOME TO IIT DEVELOPER TELEGRAM SOFTWARE ANY QUEARY CALL US 9005552324 ')
 
 
 SLEEP_TIME_1 = 100
@@ -45,8 +46,11 @@ if not client.is_user_authorized():
     client.sign_in(phone, input('40779'))
 
 users = []
-with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name
-    rows = csv.reader(f,delimiter=",",lineterminator="\n")
+with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name 
+    if msvcrt.kbhit():
+	if ord(msvcrt.getch()) == 27:
+	   break
+    rows = csv.reader(f,delimiter=",",lineterminator="\n")	
     next(rows, None)
     for row in rows:
         user = {}
@@ -87,7 +91,7 @@ g_index = input("Enter a Number: ")
 target_group = groups[int(g_index)]
 
 target_group_entity = InputPeerChannel(target_group.id, target_group.access_hash)
-mode = int(input("Enter 1 to add by username or 2 to add by ID: "))
+mode = int(input("Enter 1 to add by username \nEnter  2 to add by ID: "))
 n = 0
 for user in users:
     n += 1
