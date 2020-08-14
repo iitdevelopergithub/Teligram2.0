@@ -59,9 +59,6 @@ if not client.is_user_authorized():
 
 users = []
 with open(r"members.csv", encoding='UTF-8') as f:  #Enter your file name 
-    if msvcrt.kbhit():
-	if ord(msvcrt.getch()) == 27:
-	   break
     rows = csv.reader(f,delimiter=",",lineterminator="\n")	
     next(rows, None)
     for row in rows:
@@ -109,6 +106,9 @@ for user in users:
     n += 1
     if n % 80 == 0:
         time.sleep(60)
+    if msvcrt.kbhit():
+	if ord(msvcrt.getch()) == 27:
+	   break	
     try:
         print("Adding {}".format(user['id']))
         if mode == 1:
