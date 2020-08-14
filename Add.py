@@ -26,7 +26,7 @@ def banner():
 	""")
 banner()
 print(gr+"[+] Welcome to IIT DEVELOPER This is created by IIT DEVELOPER Team")   
-img = Image.open('iitdeveloper.jpg')    
+img = Image.open('TelegramBanner.jpg')    
 img.show() 
 
 cpass = configparser.RawConfigParser()
