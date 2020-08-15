@@ -106,10 +106,8 @@ for user in users:
     n += 1
     if n % 80 == 0:
         time.sleep(60)
-    if msvcrt.kbhit():
-	if ord(msvcrt.getch()) == 27:
-	   break	
-    try:
+    
+    try:		
         print("Adding {}".format(user['id']))
         if mode == 1:
             if user['username'] == "":
