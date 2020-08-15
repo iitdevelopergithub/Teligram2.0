@@ -11,7 +11,7 @@ import random
 import os, sys
 import configparser
 #from PIL import Image  # Image Show 
-import msvcrt #Here the key used to exit the loop was <ESC>, chr(27).
+#import msvcrt #Here the key used to exit the loop was <ESC>, chr(27).
 re="\033[1;31m"
 gr="\033[1;32m"
 cy="\033[1;36m"
